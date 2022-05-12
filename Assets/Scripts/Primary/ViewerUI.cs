@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.Events;
 using Patterns;
 using Secondary;
 using TMPro;
-
+using UnityEngine.UI;
 
 namespace Primary
 {
@@ -13,10 +14,20 @@ namespace Primary
     //This script utilizes the Singleton Pattern, so that it can be accessed from anywhere
     public class ViewerUI : Singleton<ViewerUI>
     {
+        [Serializable]
+        class UIColorScheme
+        {
+            public Color title_Background_Color;
+            public Color title_Text_Color;
+            public Color content_Background_Color;
+            public Color content_Text_Color;
+        }
         #region Variables
         [Header("Other Components")]
-        public TextMeshProUGUI nameText;
-        public TextMeshProUGUI descriptionText;
+        public Image title_Background;
+        public TextMeshProUGUI title_Text;
+        public Image content_Background;
+        public TextMeshProUGUI content_Text;
         Animator animator;
 
         [Header("Variables")]
@@ -27,6 +38,11 @@ namespace Primary
         [Header("Settings")]
         //The amount of time in-between each queue item execution
         public float eventDuration;
+
+        [SerializeField] UIColorScheme normalColorScheme;
+        [SerializeField] UIColorScheme specialColorScheme;
+        [SerializeField] UIColorScheme rewardColorScheme;
+        
         #endregion
 
         #region MonoBehavior Functions
@@ -37,6 +53,13 @@ namespace Primary
         #endregion
 
         #region Functions and Coroutines
+        void ChangeColorScheme(UIColorScheme scheme)
+        {
+            title_Text.color = scheme.title_Text_Color;
+            title_Background.color = scheme.title_Background_Color;
+            content_Text.color = scheme.content_Text_Color;
+            content_Background.color = scheme.content_Background_Color;
+        }
 
         //The function queues a new Show event in the queue, and starts the clearing of the queue if it hasn't already started
         public void QueueShow(Viewable viewable)
@@ -62,8 +85,20 @@ namespace Primary
         void Show(Viewable viewable)
         {
             animator.SetTrigger("Show");
-            nameText.text = viewable.viewable_Name;
-            descriptionText.text = viewable.viewable_Description;
+            switch (viewable.viewable_Type)
+            {
+                case Viewable.ViewableType.Normal:
+                    ChangeColorScheme(normalColorScheme);
+                    break;
+                case Viewable.ViewableType.Special:
+                    ChangeColorScheme(specialColorScheme);
+                    break;
+                case Viewable.ViewableType.Reward:
+                    ChangeColorScheme(rewardColorScheme);
+                    break;
+            }
+            title_Text.text = viewable.viewable_Name;
+            content_Text.text = viewable.viewable_Description;
 
         }
 

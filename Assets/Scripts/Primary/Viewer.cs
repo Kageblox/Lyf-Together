@@ -12,7 +12,8 @@ namespace Primary
         #region Variables
         [Header("Other Components")]
         //The gameObject that will store the currently viewed object
-        public GameObject viewTarget;
+        public GameObject normalViewTarget;
+        public GameObject rewardViewTarget;
 
         [Header("Variables")]
         //The amount of time held. If it is more than holdTime, it will be counted as a Hold. Else, it will be counted as a tap
@@ -32,6 +33,8 @@ namespace Primary
 
         //The Vector3 that rotates the currently viewed object
         Vector3 rotationVector;
+
+        bool rotationEnabled;
 
         [Header("Settings")]
         //The lerp value used to bring or return objects
@@ -138,14 +141,14 @@ namespace Primary
             }
 #endif
             //If there's currently a viewed object
-            if (currentlyViewed != null)
+            if (currentlyViewed != null && rotationEnabled)
             {
                 //Then determine the swipe vector via the position of the held position last frame compared to the held position this frame
                 Vector3 swipeVector = Vector3.zero;
                 if (held && touchPos.magnitude > 0)
                 {
                     swipeVector = lastPos - touchPos;
-                    swipeVector = new Vector3(-swipeVector.y, swipeVector.x, swipeVector.z);
+                    swipeVector = new Vector3(-swipeVector.y, swipeVector.z, swipeVector.x);
                     lastPos = touchPos;
                 }
 
@@ -185,9 +188,13 @@ namespace Primary
             //First, return the currently viewed object
             if (currentlyViewed)
             {
+                if (currentlyViewed.viewable_Type != Viewable.ViewableType.Reward)
+                {
+                    ViewerUI.Instance.QueueHide();
+                }
                 currentlyViewed.Return(lerp);
                 currentlyViewed = null;
-                ViewerUI.Instance.QueueHide();
+                
             }
 
             //Next, check the screen position for any viewable objects
@@ -198,12 +205,29 @@ namespace Primary
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, collideMask))
             {
                 Viewable objViewable = hit.transform.gameObject.GetComponent<Viewable>();
-
+                currentlyViewed = objViewable;
+                switch (objViewable.viewable_Type)
+                {
+                    case Viewable.ViewableType.Normal:
+                        rotationEnabled = true;
+                        currentlyViewed.View(lerp, normalViewTarget);
+                        ViewerUI.Instance.QueueShow(objViewable);
+                        break;
+                    case Viewable.ViewableType.Special:
+                        rotationEnabled = true;
+                        currentlyViewed.View(lerp, normalViewTarget);
+                        ViewerUI.Instance.QueueShow(objViewable);
+                        break;
+                    case Viewable.ViewableType.Reward:
+                        rotationEnabled = false;
+                        currentlyViewed.View(lerp, rewardViewTarget);
+                        break;
+                }
                 rotationVector = Vector3.zero;
 
-                currentlyViewed = objViewable;
-                currentlyViewed.View(lerp, viewTarget);
-                ViewerUI.Instance.QueueShow(objViewable);
+                
+                
+                
             }
         }
         #endregion
