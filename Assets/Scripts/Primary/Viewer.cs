@@ -147,8 +147,17 @@ namespace Primary
                 Vector3 swipeVector = Vector3.zero;
                 if (held && touchPos.magnitude > 0)
                 {
+
+#if UNITY_ANDROID
                     swipeVector = lastPos - touchPos;
-                    swipeVector = new Vector3(-swipeVector.y, swipeVector.z, swipeVector.x);
+                    swipeVector = new Vector3(swipeVector.x, 0, -swipeVector.y);
+#endif
+
+#if UNITY_EDITOR
+                    swipeVector = lastPos - touchPos;
+                    swipeVector = new Vector3(-swipeVector.y, 0, swipeVector.x);
+#endif
+
                     lastPos = touchPos;
                 }
 
