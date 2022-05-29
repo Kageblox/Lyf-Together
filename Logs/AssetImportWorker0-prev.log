@@ -15,12 +15,12 @@ C:/GitRepo/Lyf-Together
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59879
+57484
 Successfully changed project path to: C:/GitRepo/Lyf-Together
 C:/GitRepo/Lyf-Together
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 198.92 ms, found 6 plugins.
-Preloading 2 native plugins for Editor in 4.70 ms.
+Refreshing native plugins compatible for Editor in 142.02 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 3.57 ms.
 Initialize engine version: 2021.1.11f1 (4d8c25f7477e)
 [Subsystems] Discovering subsystems at path C:/Users/Johann/Desktop/Unity Stuff/2021.1.11f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/GitRepo/Lyf-Together/Assets
@@ -35,50 +35,526 @@ Initialize mono
 Mono path[0] = 'C:/Users/Johann/Desktop/Unity Stuff/2021.1.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Users/Johann/Desktop/Unity Stuff/2021.1.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Users/Johann/Desktop/Unity Stuff/2021.1.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56692
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56072
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Users/Johann/Desktop/Unity Stuff/2021.1.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001994 seconds.
+Registered in 0.001523 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 149.22 ms, found 6 plugins.
-Preloading 2 native plugins for Editor in 0.14 ms.
+Refreshing native plugins compatible for Editor in 118.35 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.11 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.404 seconds
+- Completed reload, in  1.735 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2404ms)
-		BeginReloadAssembly (79ms)
+	ReloadAssembly (1735ms)
+		BeginReloadAssembly (47ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (649ms)
-			LoadAssemblies (77ms)
+		EndReloadAssembly (539ms)
+			LoadAssemblies (45ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (221ms)
+			SetupTypeCache (168ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (318ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (285ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (149ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (117ms)
-				ProcessInitializeOnLoadMethodAttributes (42ms)
+				RefreshPlugins (119ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (119ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.014193 seconds.
+Registered in 0.010943 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 147.57 ms, found 6 plugins.
+Refreshing native plugins compatible for Editor in 121.00 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.12 ms.
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at VuforiaEnabledObserver..cctor () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.InitializeOnLoadVuforiaTaskRunner..cctor () [0x00015] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.383 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1383ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1179ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (432ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (481ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (121ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (251ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.16 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.14 ms.
+Unloading 4340 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 169.1 MB.
+System memory in use after: 165.6 MB.
+
+Unloading 98 unused Assets to reduce memory usage. Loaded Objects now: 5045.
+Total: 5.885500 ms (FindLiveObjects: 0.869900 ms CreateObjectMapping: 0.901800 ms MarkObjects: 2.673700 ms  DeleteObjects: 1.438500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Resources/Images/Sprites/Shapes/afternoon.png
+  artifactKey: Guid(32738a08a896ba34495bdeab947e0a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Shapes/afternoon.png using Guid(32738a08a896ba34495bdeab947e0a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9a7eba94223a920b535ce3c08ad075f') in 0.092455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000306 seconds.
+  path: Assets/Resources/Images/Sprites/Shapes/night.png
+  artifactKey: Guid(bbb524c9026e0054e8c7892ef70a85d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Shapes/night.png using Guid(bbb524c9026e0054e8c7892ef70a85d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8f7a46f250ebf092f4457a991e7afc0') in 0.018382 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Resources/Images/Sprites/Shapes/evening.png
+  artifactKey: Guid(6ff3f13e952001e49844ec4f4979c073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Shapes/evening.png using Guid(6ff3f13e952001e49844ec4f4979c073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76c2bcff13bb7a29dec1081a143fd80e') in 0.014656 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Resources/Images/Sprites/Shapes/morning.png
+  artifactKey: Guid(e8b67ad846d6c104cb6392aa246550d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Shapes/morning.png using Guid(e8b67ad846d6c104cb6392aa246550d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e108ad7c570572f272a3660922169200') in 0.013716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.183531 seconds.
+  path: Assets/Resources/Images/Sprites/Shapes/evening.png
+  artifactKey: Guid(6ff3f13e952001e49844ec4f4979c073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Shapes/evening.png using Guid(6ff3f13e952001e49844ec4f4979c073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ca724cbd8be210e0707b9da9ae73f3d') in 0.062489 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Resources/Images/Sprites/Shapes/afternoon.png
+  artifactKey: Guid(32738a08a896ba34495bdeab947e0a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Shapes/afternoon.png using Guid(32738a08a896ba34495bdeab947e0a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '483725a4dae6490aac19394f23c578ab') in 0.019925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Resources/Images/Sprites/Shapes/night.png
+  artifactKey: Guid(bbb524c9026e0054e8c7892ef70a85d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Shapes/night.png using Guid(bbb524c9026e0054e8c7892ef70a85d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1f3705aef18b3f63a7d3725618ec142') in 0.015126 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000375 seconds.
+  path: Assets/Resources/Images/Sprites/Shapes/morning.png
+  artifactKey: Guid(e8b67ad846d6c104cb6392aa246550d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Shapes/morning.png using Guid(e8b67ad846d6c104cb6392aa246550d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56a3016710f551c75e93cb6b379da44e') in 0.017428 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 204.531023 seconds.
+  path: Assets/Resources/Animations/UI/Viewer/ViewerAnimator.controller
+  artifactKey: Guid(2b081a08c25027f46b97b003b788caaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Animations/UI/Viewer/ViewerAnimator.controller using Guid(2b081a08c25027f46b97b003b788caaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5146eb83e8caceac1f8db553dd0cf16') in 0.013062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1514.702646 seconds.
+  path: Assets/Common/Icons/Android/Icon-36.png
+  artifactKey: Guid(98e9bf2eec31e492d858fd08e8223ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/Android/Icon-36.png using Guid(98e9bf2eec31e492d858fd08e8223ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40a3cb025448e8af5ba48ae8e595015b') in 0.024402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Common/Icons/iOS/Icon-40.png
+  artifactKey: Guid(b3252f95d1a3a4cd58871ff4716e5d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-40.png using Guid(b3252f95d1a3a4cd58871ff4716e5d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '292b2e4a00b85d6a20cd9a9726c12505') in 0.019142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Common/Icons/iOS/Icon-48.png
+  artifactKey: Guid(5b6408b8fcc554852ba035c9cb16aad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-48.png using Guid(5b6408b8fcc554852ba035c9cb16aad4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9f28bd8276962355be81f2e31140501') in 0.019804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.452898 seconds.
+  path: Assets/Common/Icons/Android/Icon-48.png
+  artifactKey: Guid(6fae8ff752f494bacb3c562bed7dea2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/Android/Icon-48.png using Guid(6fae8ff752f494bacb3c562bed7dea2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdaf51e215810158134e50e2abb84440') in 0.015443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Common/Icons/iOS/Icon-57.png
+  artifactKey: Guid(8f0cac86f23b94d7693801136041165e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-57.png using Guid(8f0cac86f23b94d7693801136041165e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c0c7b85f3ae275582ca0a81b5f8f640') in 0.022990 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Common/Icons/iOS/Icon-72.png
+  artifactKey: Guid(a60549db96b2842fe9035b4880bfa6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-72.png using Guid(a60549db96b2842fe9035b4880bfa6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76e0c7a43953e941edbe9c50341a319a') in 0.021537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/Common/Icons/iOS/Icon-76.png
+  artifactKey: Guid(819aa9af392f0436686712974e387eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-76.png using Guid(819aa9af392f0436686712974e387eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9097fc8d421579123153e7f5e13c00ed') in 0.021625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Common/Icons/iOS/Icon-58.png
+  artifactKey: Guid(753491ea5c3de4f928409d7f8e96b80b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-58.png using Guid(753491ea5c3de4f928409d7f8e96b80b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3490b3f4a7a0f5f48a4cacf7ff73d37') in 0.021687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Common/Icons/iOS/Icon-87.png
+  artifactKey: Guid(dd034f60ad00b407089fd2248eb2bae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-87.png using Guid(dd034f60ad00b407089fd2248eb2bae0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7540477cb1c85daedab6a8ac22951b82') in 0.022442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Common/Icons/iOS/Icon-88.png
+  artifactKey: Guid(c352bbf5f1c324a93a0758d8b4d8d0e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-88.png using Guid(c352bbf5f1c324a93a0758d8b4d8d0e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e561ee8d52568ba79803966cb97aaa95') in 0.021674 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Common/Icons/iOS/Icon-114.png
+  artifactKey: Guid(4425ccef1413140a09233e0eba47657d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-114.png using Guid(4425ccef1413140a09233e0eba47657d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '463ae4ad063f58a8ff62eef49f81b4dd') in 0.024255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Common/Icons/iOS/Icon-128.png
+  artifactKey: Guid(6278ff11915714cf4a571a49bbc59f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-128.png using Guid(6278ff11915714cf4a571a49bbc59f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a218655f68ed9b4731e037ca322d784') in 0.022214 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Common/Icons/iOS/Icon-55.png
+  artifactKey: Guid(b17260949918c406b99342d1c02995ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-55.png using Guid(b17260949918c406b99342d1c02995ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebc2d7b6c44bae4530088da7884e671e') in 0.018725 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/Common/Icons/Android/Icon-72.png
+  artifactKey: Guid(d85ccead4ae714b0682b281b94267e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/Android/Icon-72.png using Guid(d85ccead4ae714b0682b281b94267e7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7e5bed06ebc25e78c3ead8ef39b67b1') in 0.015748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Common/Icons/iOS/Icon-80.png
+  artifactKey: Guid(b36a145ee04964f5a8fbc998f53ad10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-80.png using Guid(b36a145ee04964f5a8fbc998f53ad10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb9b0ef4277393c8975f57c353916dd') in 0.022408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Common/Icons/Android/Icon-96.png
+  artifactKey: Guid(827b731c62d8d42c093899fa44179bb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/Android/Icon-96.png using Guid(827b731c62d8d42c093899fa44179bb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a0d646f15c8580d237353ff862c4803') in 0.022217 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Common/Icons/iOS/Icon-100.png
+  artifactKey: Guid(65c4e7c74b99141b58dfa4d259a65444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-100.png using Guid(65c4e7c74b99141b58dfa4d259a65444) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6f315cfcca0b02bda6079bfe2edd38b') in 0.021833 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000325 seconds.
+  path: Assets/Common/Icons/iOS/Icon-50.png
+  artifactKey: Guid(b7afc2dad7a944b10a7460688d192721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-50.png using Guid(b7afc2dad7a944b10a7460688d192721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf4b13bbd8ebe2dbb7cae74be3615451') in 0.019802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Common/Icons/iOS/Icon-64.png
+  artifactKey: Guid(887074311a0ab4d3586bc5203a08742b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-64.png using Guid(887074311a0ab4d3586bc5203a08742b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b90b294d2322f0d4c1e35a1a0a663742') in 0.021081 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Common/Icons/iOS/Icon-60.png
+  artifactKey: Guid(83a6483f53e5f448a84f14d9e27ee822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-60.png using Guid(83a6483f53e5f448a84f14d9e27ee822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e496a9a9b84a0a6649eb5550303b1679') in 0.020553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Common/Icons/iOS/Icon-120.png
+  artifactKey: Guid(e5d044c008db542bf8371f7e7c91bb50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-120.png using Guid(e5d044c008db542bf8371f7e7c91bb50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '893b28bb6e04ff59d51c36231695f0ff') in 0.023389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.341427 seconds.
+  path: Assets/Common/Icons/Android/Icon-144.png
+  artifactKey: Guid(fe689abc1067e4869a58c87d14482078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/Android/Icon-144.png using Guid(fe689abc1067e4869a58c87d14482078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0986f1e21962f3eed70836222a183246') in 0.023051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Common/Icons/iOS/Icon-144.png
+  artifactKey: Guid(fe2bd0f39a09244c993553fc1df45073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-144.png using Guid(fe2bd0f39a09244c993553fc1df45073) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '715100f72e41edb4eee8a566e11f71f8') in 0.020213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Common/Icons/iOS/Icon-167.png
+  artifactKey: Guid(4cbc9362b367d44d58da2b6146f50c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-167.png using Guid(4cbc9362b367d44d58da2b6146f50c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a363148f2ca07569bf03ac26c0aa1b3') in 0.026555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/Common/Icons/iOS/Icon-180.png
+  artifactKey: Guid(73c9e6fc8fd374b119e143a8bc52bf28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-180.png using Guid(73c9e6fc8fd374b119e143a8bc52bf28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21a9b21aea60510aeb6b688646d178c8') in 0.023782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Common/Sprites/reset.png
+  artifactKey: Guid(6c8cc212fd1504c00831c2b73b4fb52a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Sprites/reset.png using Guid(6c8cc212fd1504c00831c2b73b4fb52a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b4953ffdf4d53dfbcbfbc85adcf7b78') in 0.024036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Common/Icons/iOS/Icon-1024.png
+  artifactKey: Guid(50f07d81dcf4c4fbb8b2c326e7d4b6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-1024.png using Guid(50f07d81dcf4c4fbb8b2c326e7d4b6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d2a26d28fd9688b1a6d1b31c5cff2df') in 0.034660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Common/Icons/iOS/Icon-256.png
+  artifactKey: Guid(8cc5cc8d395f8468aafd15f2aaebb14c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-256.png using Guid(8cc5cc8d395f8468aafd15f2aaebb14c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '064965474b35a86c27b29336b6e97692') in 0.022166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Common/Icons/Android/Icon-192.png
+  artifactKey: Guid(b15ee11232b424d68898398fe3cab2d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/Android/Icon-192.png using Guid(b15ee11232b424d68898398fe3cab2d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc0ca83b27243b076a33ce8f28a0e948') in 0.023521 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Common/Icons/iOS/Icon-196.png
+  artifactKey: Guid(38c9f8f898d5a461397639d3a61e1428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-196.png using Guid(38c9f8f898d5a461397639d3a61e1428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '571409c93a78f281be245a0022a1fe86') in 0.022136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Common/Icons/iOS/Icon-512.png
+  artifactKey: Guid(d009bdac2bfb64f73a7d01d12af11139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-512.png using Guid(d009bdac2bfb64f73a7d01d12af11139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '500ac494e4c09b8cc2d866f1f6364347') in 0.027221 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Common/Icons/iOS/Icon-152.png
+  artifactKey: Guid(6cb233dc65f0b459daf2ad80d17034da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-152.png using Guid(6cb233dc65f0b459daf2ad80d17034da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59cc72de1822bda771b0de6e545b4870') in 0.023045 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Common/Icons/Android/Icon-512.png
+  artifactKey: Guid(8d26e2b0041c2447d9888ac10b3aaf03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/Android/Icon-512.png using Guid(8d26e2b0041c2447d9888ac10b3aaf03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fe7c5867947c34c2e15437a0ccee3fb') in 0.019802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000294 seconds.
+  path: Assets/Common/Icons/iOS/Icon-172.png
+  artifactKey: Guid(9caa22d79a15a41e8affca63c0536a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/iOS/Icon-172.png using Guid(9caa22d79a15a41e8affca63c0536a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d1411b5164c953373d9e17e6497de37') in 0.022900 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.026949 seconds.
+  path: Assets/Common/Sprites/scanline.png
+  artifactKey: Guid(ed8c6abe4a9824b7997c118d2c8a4452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Sprites/scanline.png using Guid(ed8c6abe4a9824b7997c118d2c8a4452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45e33bb93c177a38a885b4ea2087470c') in 0.018512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Common/Icons/UWP/SplashScreen.scale-100.png
+  artifactKey: Guid(de5a9ac105040ee4c8837f65201981bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/UWP/SplashScreen.scale-100.png using Guid(de5a9ac105040ee4c8837f65201981bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a87811b197979bce799363c8ba4217a4') in 0.026731 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Common/Sprites/spinner.png
+  artifactKey: Guid(264807bb2ba1ba24daeba940d6cdbade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Sprites/spinner.png using Guid(264807bb2ba1ba24daeba940d6cdbade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8224ef9ac5986f1aa5fe224f5aa75256') in 0.024811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Common/Icons/UWP/SplashScreen.scale-125.png
+  artifactKey: Guid(1f3678bd16e407946824f7f20e6e513d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/UWP/SplashScreen.scale-125.png using Guid(1f3678bd16e407946824f7f20e6e513d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031b46ecce4bb113069b472c44e028a0') in 0.025015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Common/Sprites/vuforia_logo.png
+  artifactKey: Guid(e0866a3fe6007224a9e3078d831ce6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Sprites/vuforia_logo.png using Guid(e0866a3fe6007224a9e3078d831ce6fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8e799116649b67dd62292344689cf76') in 0.028941 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Common/Icons/UWP/SplashScreen.scale-150.png
+  artifactKey: Guid(2ea158708e7a21e4ead741823fd0f8ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/UWP/SplashScreen.scale-150.png using Guid(2ea158708e7a21e4ead741823fd0f8ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666004bd01cdf3689b281fd577ed3fae') in 0.027792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Common/Icons/UWP/SplashScreen.scale-200.png
+  artifactKey: Guid(8e614c22e974d9f429f920990d61ef52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Common/Icons/UWP/SplashScreen.scale-200.png using Guid(8e614c22e974d9f429f920990d61ef52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67dc4fc9c4be373bbb186afa39eed284') in 0.032370 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008417 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.13 ms.
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at VuforiaEnabledObserver..cctor () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.InitializeOnLoadVuforiaTaskRunner..cctor () [0x00015] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.520 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1520ms)
+		BeginReloadAssembly (179ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (93ms)
+		EndReloadAssembly (1269ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (495ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (425ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (311ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.16 ms.
+Unloading 4354 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 197.7 MB.
+System memory in use after: 194.3 MB.
+
+Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 5827.
+Total: 6.467400 ms (FindLiveObjects: 0.596900 ms CreateObjectMapping: 0.293000 ms MarkObjects: 3.530900 ms  DeleteObjects: 2.044800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.018754 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 6 plugins.
 Preloading 2 native plugins for Editor in 0.16 ms.
 System.NullReferenceException: Object reference not set to an instance of an object
   at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
@@ -107,47 +583,45 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  2.995 seconds
+- Completed reload, in  2.158 seconds
 Domain Reload Profiling:
-	ReloadAssembly (3019ms)
-		BeginReloadAssembly (1294ms)
+	ReloadAssembly (2159ms)
+		BeginReloadAssembly (258ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (19ms)
+			DisableScriptedObjects (47ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (597ms)
-		EndReloadAssembly (1585ms)
-			LoadAssemblies (157ms)
+			CreateAndSetChildDomain (110ms)
+		EndReloadAssembly (1797ms)
+			LoadAssemblies (141ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (619ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (77ms)
-			SetupLoadedEditorAssemblies (608ms)
+			SetupTypeCache (758ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (83ms)
+			SetupLoadedEditorAssemblies (570ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (148ms)
-				BeforeProcessingInitializeOnLoad (115ms)
-				ProcessInitializeOnLoadAttributes (321ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (411ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
 				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (43ms)
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.29 ms, found 6 plugins.
-Preloading 2 native plugins for Editor in 0.19 ms.
-Unloading 4340 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 169.1 MB.
-System memory in use after: 165.6 MB.
+Refreshing native plugins compatible for Editor in 1.31 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.16 ms.
+Unloading 4309 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 195.9 MB.
+System memory in use after: 192.6 MB.
 
-Unloading 98 unused Assets to reduce memory usage. Loaded Objects now: 5045.
-Total: 5.154300 ms (FindLiveObjects: 0.428100 ms CreateObjectMapping: 0.310000 ms MarkObjects: 2.825500 ms  DeleteObjects: 1.588900 ms)
+Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 5830.
+Total: 6.450700 ms (FindLiveObjects: 0.663800 ms CreateObjectMapping: 0.373700 ms MarkObjects: 3.462600 ms  DeleteObjects: 1.948500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -157,35 +631,19 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  path: Assets/Resources/Images/Sprites/Not Shapes/AfternoonSky.png
-  artifactKey: Guid(1fd10165d3f0447469957b2c6d0e4e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Images/Sprites/Not Shapes/AfternoonSky.png using Guid(1fd10165d3f0447469957b2c6d0e4e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf5d948bcfdb1edeb83e26aeebbecc5') in 0.185875 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 43.084009 seconds.
-  path: Assets/Resources/Images/Sprites/Not Shapes/Background.mat
-  artifactKey: Guid(2fad39a4a1b10a349b5e63a828c9596e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Images/Sprites/Not Shapes/Background.mat using Guid(2fad39a4a1b10a349b5e63a828c9596e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ab1141b618af3ad337df31436b75291') in 0.050514 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 24.292641 seconds.
-  path: Assets/Resources/Images/Sprites/Not Shapes/Background.mat
-  artifactKey: Guid(2fad39a4a1b10a349b5e63a828c9596e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Images/Sprites/Not Shapes/Background.mat using Guid(2fad39a4a1b10a349b5e63a828c9596e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '029d311fb3db34ec3e169dca3a47ad35') in 0.037905 seconds 
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.010850 seconds.
+Registered in 0.009087 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.15 ms, found 6 plugins.
-Preloading 2 native plugins for Editor in 0.14 ms.
+Refreshing native plugins compatible for Editor in 1.05 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.11 ms.
 System.NullReferenceException: Object reference not set to an instance of an object
   at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
   at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
@@ -213,45 +671,457 @@ UnityEngine.Debug:LogError (object)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.482 seconds
+- Completed reload, in  1.204 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1482ms)
-		BeginReloadAssembly (130ms)
+	ReloadAssembly (1204ms)
+		BeginReloadAssembly (114ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (51ms)
-		EndReloadAssembly (1274ms)
-			LoadAssemblies (104ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (1025ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (526ms)
+			SetupTypeCache (411ms)
 			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (409ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (332ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (88ms)
-				ProcessInitializeOnLoadAttributes (301ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (244ms)
 				ProcessInitializeOnLoadMethodAttributes (5ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
 Platform modules already initialized, skipping
 Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.15 ms, found 6 plugins.
-Preloading 2 native plugins for Editor in 0.14 ms.
-Unloading 4310 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 172.4 MB.
-System memory in use after: 168.8 MB.
+Refreshing native plugins compatible for Editor in 0.96 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.09 ms.
+Unloading 4309 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 196.0 MB.
+System memory in use after: 192.6 MB.
 
-Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 5106.
-Total: 6.961800 ms (FindLiveObjects: 0.577000 ms CreateObjectMapping: 0.284500 ms MarkObjects: 3.984200 ms  DeleteObjects: 2.114600 ms)
+Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 5833.
+Total: 4.590000 ms (FindLiveObjects: 0.596600 ms CreateObjectMapping: 0.229700 ms MarkObjects: 2.371400 ms  DeleteObjects: 1.391500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 3150.682584 seconds.
+  path: Assets/Scripts/Primary/TimeSwapper.cs
+  artifactKey: Guid(2d6b35d03413aa94787c6748ce6d854a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Primary/TimeSwapper.cs using Guid(2d6b35d03413aa94787c6748ce6d854a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b13c85658c5188f0b991a01625b9bfe9') in 0.049307 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009149 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.11 ms.
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at VuforiaEnabledObserver..cctor () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.InitializeOnLoadVuforiaTaskRunner..cctor () [0x00015] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.220 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1220ms)
+		BeginReloadAssembly (109ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (1046ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (428ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (308ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (226ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.11 ms.
+Unloading 4310 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 196.1 MB.
+System memory in use after: 192.7 MB.
+
+Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 5837.
+Total: 4.831800 ms (FindLiveObjects: 0.476900 ms CreateObjectMapping: 0.227700 ms MarkObjects: 2.616100 ms  DeleteObjects: 1.510300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4493.285796 seconds.
+  path: Assets/Resources/Materials
+  artifactKey: Guid(365ea09df71e4a741a9549a09c7c8517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Materials using Guid(365ea09df71e4a741a9549a09c7c8517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c818a39da7c24d8526aa3ec10fc92a18') in 0.124908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.827416 seconds.
+  path: Assets/Resources/Materials/Blocker Material.mat
+  artifactKey: Guid(f592eff501e9c5e4380d2c2445782068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Materials/Blocker Material.mat using Guid(f592eff501e9c5e4380d2c2445782068) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b45b0dfc472919224d255b9ad3d331f3') in 0.299160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.302963 seconds.
+  path: Assets/Resources/Materials/Blocker Shader.shader
+  artifactKey: Guid(caf5bd0a67667884586977fc99273105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Materials/Blocker Shader.shader using Guid(caf5bd0a67667884586977fc99273105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0387ebb4929d8672204a04a517e9521b') in 0.022073 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.018565 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.12 ms.
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at VuforiaEnabledObserver..cctor () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.InitializeOnLoadVuforiaTaskRunner..cctor () [0x00015] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.373 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1373ms)
+		BeginReloadAssembly (206ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (26ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (106ms)
+		EndReloadAssembly (1102ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (458ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (331ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (77ms)
+				ProcessInitializeOnLoadAttributes (238ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.12 ms.
+Unloading 4310 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 196.4 MB.
+System memory in use after: 193.0 MB.
+
+Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 5877.
+Total: 4.772700 ms (FindLiveObjects: 0.478700 ms CreateObjectMapping: 0.256300 ms MarkObjects: 2.535500 ms  DeleteObjects: 1.501500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008576 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.12 ms.
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at VuforiaEnabledObserver..cctor () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.InitializeOnLoadVuforiaTaskRunner..cctor () [0x00015] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.217 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1217ms)
+		BeginReloadAssembly (119ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1036ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (425ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (318ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (228ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.11 ms.
+Unloading 4310 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 196.3 MB.
+System memory in use after: 193.0 MB.
+
+Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 5880.
+Total: 5.152500 ms (FindLiveObjects: 0.597400 ms CreateObjectMapping: 0.326100 ms MarkObjects: 2.681700 ms  DeleteObjects: 1.546200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 182.472087 seconds.
+  path: Assets/Resources/Images/Sprites/Not Shapes/EveningSky.png
+  artifactKey: Guid(236b0e4475c808c4fa75ebecfca39a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Not Shapes/EveningSky.png using Guid(236b0e4475c808c4fa75ebecfca39a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c84fcb14927d46ae431e8aee2b2b9e8') in 0.077136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Resources/Images/Sprites/Not Shapes/NightSky.png
+  artifactKey: Guid(5a15a85976e113143a7d2f8d8b975bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Not Shapes/NightSky.png using Guid(5a15a85976e113143a7d2f8d8b975bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bce2f981c67c44199f486a18c17a20e') in 0.040546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Resources/Images/Sprites/Not Shapes/MorningSky.png
+  artifactKey: Guid(ac96a7d17a78eeb4cabfc93a7c750e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Not Shapes/MorningSky.png using Guid(ac96a7d17a78eeb4cabfc93a7c750e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6a9e6a22f138bd704e586fb06d0297b') in 0.039438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.166182 seconds.
+  path: Assets/Resources/Images/Sprites/Not Shapes/NightSky.png
+  artifactKey: Guid(5a15a85976e113143a7d2f8d8b975bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Not Shapes/NightSky.png using Guid(5a15a85976e113143a7d2f8d8b975bc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ef8d965940e0a6a7d7998e2d3cad33') in 0.058977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Resources/Images/Sprites/Not Shapes/EveningSky.png
+  artifactKey: Guid(236b0e4475c808c4fa75ebecfca39a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Not Shapes/EveningSky.png using Guid(236b0e4475c808c4fa75ebecfca39a1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a69c078210ea10e892f851b866579a2e') in 0.024576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Resources/Images/Sprites/Not Shapes/MorningSky.png
+  artifactKey: Guid(ac96a7d17a78eeb4cabfc93a7c750e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Images/Sprites/Not Shapes/MorningSky.png using Guid(ac96a7d17a78eeb4cabfc93a7c750e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58fc183fa985aa9f8e4a0565cf6e91b8') in 0.026135 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009198 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\GitRepo\Lyf-Together\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.10 ms.
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at VuforiaEnabledObserver..cctor () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetVuforiaPackageAbsPath () [0x0004a] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.IsPackageManager () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.ResolvePluginType () [0x00009] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.ExtensionTypeProvider.GetPluginType () [0x0000c] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.VuforiaUtilities.IsVuforiaEnabledInPlayerSettings () [0x00000] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+  at Vuforia.EditorClasses.InitializeOnLoadVuforiaTaskRunner..cctor () [0x00015] in <486525dc6e7f47ceb1055ca2da800b93>:0 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.269 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1270ms)
+		BeginReloadAssembly (106ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (37ms)
+		EndReloadAssembly (1105ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (435ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (318ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (234ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(65536) extendedPlatform(0)
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 6 plugins.
+Preloading 2 native plugins for Editor in 0.11 ms.
+Unloading 4313 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 214.7 MB.
+System memory in use after: 211.4 MB.
+
+Unloading 93 unused Assets to reduce memory usage. Loaded Objects now: 5974.
+Total: 4.718500 ms (FindLiveObjects: 0.496500 ms CreateObjectMapping: 0.328800 ms MarkObjects: 2.452500 ms  DeleteObjects: 1.439200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
