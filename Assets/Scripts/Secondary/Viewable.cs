@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+
 namespace Secondary
 {
     public class Viewable : MonoBehaviour
@@ -16,7 +17,7 @@ namespace Secondary
         }
         [Header("Other Components")]
         //The location the viewable returns to when no longer being viewed
-        public GameObject home;
+        GameObject home;
 
         [Header("Variables")]
         //The name and description of the Viewable
@@ -37,6 +38,7 @@ namespace Secondary
         #region MonoBehaviour Functions
         private void Start()
         {
+            home = transform.parent.gameObject;
             homeScale = transform.localScale.x;
         }
         #endregion

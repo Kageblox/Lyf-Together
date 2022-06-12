@@ -49,7 +49,6 @@ namespace Primary
 
         //The layers which the Viewer will collide with
         public LayerMask collideMask;
-        public LayerMask ignoreMask;
         //The amount of time required for an input to be registered as a hold
         public float holdTime = 0.25f;
         #endregion
@@ -147,14 +146,9 @@ namespace Primary
                 Vector3 swipeVector = Vector3.zero;
                 if (held && touchPos.magnitude > 0)
                 {
-
-#if UNITY_ANDROID
                     swipeVector = lastPos - touchPos;
-                    swipeVector = new Vector3(swipeVector.x, 0, -swipeVector.y);
-#endif
-
+                    swipeVector = new Vector3(-swipeVector.y, swipeVector.x, 0);
 #if UNITY_EDITOR
-                    swipeVector = lastPos - touchPos;
                     swipeVector = new Vector3(-swipeVector.y, 0, swipeVector.x);
 #endif
 
@@ -194,8 +188,47 @@ namespace Primary
         //This function is in charge of Retrieving and Returning viewable objects
         void Tap(Vector2 screenPos)
         {
-            //First, return the currently viewed object
-            if (currentlyViewed)
+
+            //Next, check the screen position for any viewable objects
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(screenPos);
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, collideMask))
+            {
+                //If one has been detected, then retrieve it and update it as the currently viewed object
+                Viewable objViewable = hit.transform.gameObject.GetComponent<Viewable>();
+                if (objViewable && objViewable != currentlyViewed)
+                {
+                    currentlyViewed = objViewable;
+                    switch (objViewable.viewable_Type)
+                    {
+                        case Viewable.ViewableType.Normal:
+                            rotationEnabled = true;
+                            currentlyViewed.View(lerp, normalViewTarget);
+                            ViewerUI.Instance.QueueShow(objViewable);
+                            break;
+                        case Viewable.ViewableType.Special:
+                            rotationEnabled = true;
+                            currentlyViewed.View(lerp, normalViewTarget);
+                            ViewerUI.Instance.QueueShow(objViewable);
+                            break;
+                        case Viewable.ViewableType.Reward:
+                            rotationEnabled = false;
+                            currentlyViewed.View(lerp, rewardViewTarget);
+                            break;
+                    }
+                    rotationVector = Vector3.zero;
+                }
+                else
+                {
+                    if (currentlyViewed.viewable_Type != Viewable.ViewableType.Reward)
+                    {
+                        ViewerUI.Instance.QueueHide();
+                    }
+                    currentlyViewed.Return(lerp);
+                    currentlyViewed = null;
+                }
+            }
+            else
             {
                 if (currentlyViewed.viewable_Type != Viewable.ViewableType.Reward)
                 {
@@ -203,40 +236,6 @@ namespace Primary
                 }
                 currentlyViewed.Return(lerp);
                 currentlyViewed = null;
-                
-            }
-
-            //Next, check the screen position for any viewable objects
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(screenPos);
-
-            //If one has been detected, then retrieve it and update it as the currently viewed object
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, collideMask))
-            {
-                Viewable objViewable = hit.transform.gameObject.GetComponent<Viewable>();
-                currentlyViewed = objViewable;
-                switch (objViewable.viewable_Type)
-                {
-                    case Viewable.ViewableType.Normal:
-                        rotationEnabled = true;
-                        currentlyViewed.View(lerp, normalViewTarget);
-                        ViewerUI.Instance.QueueShow(objViewable);
-                        break;
-                    case Viewable.ViewableType.Special:
-                        rotationEnabled = true;
-                        currentlyViewed.View(lerp, normalViewTarget);
-                        ViewerUI.Instance.QueueShow(objViewable);
-                        break;
-                    case Viewable.ViewableType.Reward:
-                        rotationEnabled = false;
-                        currentlyViewed.View(lerp, rewardViewTarget);
-                        break;
-                }
-                rotationVector = Vector3.zero;
-
-                
-                
-                
             }
         }
         #endregion
