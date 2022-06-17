@@ -1,0 +1,2 @@
+Secondary scripts are scripts that there are usually multiple instances of within the scene.
+These scripts usually either hold information, or manage a single object each.

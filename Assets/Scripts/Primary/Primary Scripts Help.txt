@@ -1,0 +1,2 @@
+Primary scripts are scripts that should only have one instance in the scene. 
+Most of these scripts manage a group of Secondary scripts, or manage the scene itself in some way or fashion

@@ -7,11 +7,12 @@ using UnityEngine.EventSystems;
 
 namespace Primary
 {
+    //This function is in charge of the viewing function of the application.
     public class Viewer : MonoBehaviour
     {
         #region Variables
         [Header("Other Components")]
-        //The gameObject that will store the currently viewed object
+        //The gameObject that will store the currently viewed object. By adding offsets to these object, we can get actual offsets in the viewing.
         public GameObject normalViewTarget;
         public GameObject rewardViewTarget;
 
@@ -149,7 +150,7 @@ namespace Primary
                     swipeVector = lastPos - touchPos;
                     swipeVector = new Vector3(-swipeVector.y, swipeVector.x, 0);
 #if UNITY_EDITOR
-                    swipeVector = new Vector3(-swipeVector.y, 0, swipeVector.x);
+                    swipeVector = new Vector3(swipeVector.x, 0, swipeVector.y);
 #endif
 
                     lastPos = touchPos;
@@ -230,12 +231,15 @@ namespace Primary
             }
             else
             {
-                if (currentlyViewed.viewable_Type != Viewable.ViewableType.Reward)
+                if (currentlyViewed != null)
                 {
-                    ViewerUI.Instance.QueueHide();
+                    if (currentlyViewed.viewable_Type != Viewable.ViewableType.Reward)
+                    {
+                        ViewerUI.Instance.QueueHide();
+                    }
+                    currentlyViewed.Return(lerp);
+                    currentlyViewed = null;
                 }
-                currentlyViewed.Return(lerp);
-                currentlyViewed = null;
             }
         }
         #endregion

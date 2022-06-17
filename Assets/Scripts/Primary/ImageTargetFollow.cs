@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Primary
 {
+    //This script is in charge of enabling or disabling the entire scene, and also the tracking of the scene to the image target
     public class ImageTargetFollow : MonoBehaviour
     {
         #region Variables

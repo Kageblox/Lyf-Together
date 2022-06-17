@@ -5,10 +5,11 @@ using UnityEngine.Events;
 
 namespace Secondary
 {
+    //This class should be attached to objects that are meant to be viewable.
     public class Viewable : MonoBehaviour
     {
         #region Variables
-
+        //Different Viewable types. Add more here in case more are required
         public enum ViewableType
         {
             Normal,
@@ -32,16 +33,18 @@ namespace Secondary
         IEnumerator runningEnu;
 
         [Header("Settings")]
-        //The distance before the Viewable snaps to either Home or the View Target
+        //The distance before the Viewable snaps to either Home or the View Target. This should be left alone for the most part, but can be changed if need be
         public float distToSnap = 0.1f;
         #endregion
+
         #region MonoBehaviour Functions
-        private void Start()
+        void Start()
         {
             home = transform.parent.gameObject;
             homeScale = transform.localScale.x;
         }
         #endregion
+
         #region Functions and Coroutines
         //The function that initiates the viewing of the Viewable
         public void View(float lerp, GameObject target)

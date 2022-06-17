@@ -14,6 +14,7 @@ namespace Primary
     //This script utilizes the Singleton Pattern, so that it can be accessed from anywhere
     public class ViewerUI : Singleton<ViewerUI>
     {
+        #region Classes
         [Serializable]
         class UIColorScheme
         {
@@ -22,6 +23,8 @@ namespace Primary
             public Color content_Background_Color;
             public Color content_Text_Color;
         }
+        #endregion
+
         #region Variables
         [Header("Other Components")]
         public Image title_Background;
@@ -39,15 +42,16 @@ namespace Primary
         //The amount of time in-between each queue item execution
         public float eventDuration;
 
+        //Potential color schemes. Add more here in the same way.
         [SerializeField] UIColorScheme normalColorScheme;
         [SerializeField] UIColorScheme specialColorScheme;
         [SerializeField] UIColorScheme rewardColorScheme;
-        
         #endregion
 
         #region MonoBehavior Functions
         void Start()
         {
+            //At the start, retrieve the animator component
             animator = GetComponent<Animator>();
         }
         #endregion
@@ -85,6 +89,7 @@ namespace Primary
         void Show(Viewable viewable)
         {
             animator.SetTrigger("Show");
+            //Please add more cases here in case more color schemes are required. And also, please update the ViewableType Enum as well.
             switch (viewable.viewable_Type)
             {
                 case Viewable.ViewableType.Normal:
@@ -99,7 +104,6 @@ namespace Primary
             }
             title_Text.text = viewable.viewable_Name;
             content_Text.text = viewable.viewable_Description;
-
         }
 
         //The function hides the UI

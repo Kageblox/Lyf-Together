@@ -5,10 +5,11 @@ using UnityEngine;
 
 namespace Secondary
 {
+    //This script saves its children lights into presets to load.
     public class LightingGroup : MonoBehaviour
     {
         public Primary.TimeLighting.LightPreset[] presets = new Primary.TimeLighting.LightPreset[3];
-        void Start()
+        void Awake()
         {
             Light[] lights = transform.GetComponentsInChildren<Light>();
             for (int i = 0; i < 3; i++)
@@ -18,5 +19,4 @@ namespace Secondary
             }
         }
     }
-
 }
